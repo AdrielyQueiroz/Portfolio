@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color:#080808f1;
+    font-family: 'Raleway';
+  }
+
+html {
+    scroll-behavior: smooth;
+  }
+  
