@@ -1,0 +1,148 @@
+.home-section {
+  position: relative;
+  background-image: url('https://kodemint.in/images/site/kodemint-services-web-application-development.png');
+  background-size: 53%;
+  background-position: start;
+  margin-left: -80px;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 20px;
+  animation: moveBackground 10s linear infinite, changeBackgroundColor 5s ease-in-out infinite alternate;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 20% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+/* Sobreposição (Overlay) */
+.home-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+h2 {
+  color: rgb(253, 253, 253);
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-top: -100px;
+  transform: translateX(40%);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
+  display: inline-block;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+h2::after {
+  content: '|'; 
+  position: absolute;
+  right: -10px;
+  animation: blink 0.75s step-end infinite;
+  font-size: 50px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  background: none;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-left: 60%;
+  width: 100%;
+  margin-top: -30px;
+}
+
+
+hr {
+  border: 0;
+  border-top: 2px solid #fab0b0; 
+  margin: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -100px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .home-section {
+    background-size: 100%; 
+    padding-left: 10px;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 40px;
+    transform: translateX(0);
+    margin-top: 0;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  hr {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-section {
+    height: 75vh;
+    width: 50vh;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  hr {
+    width: 95%;
+  }
+}
+
+
+
+
